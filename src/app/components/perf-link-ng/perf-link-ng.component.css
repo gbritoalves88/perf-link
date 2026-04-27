@@ -1,0 +1,319 @@
+:host {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100vh;
+  background: #fcf5f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  border: none;
+  outline: none;
+}
+
+/* Card principal - SEM FUNDO, apenas os elementos flutuam */
+.perf-card {
+  max-width: 650px;
+  width: 100%;
+  text-align: center;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Avatar flutuante */
+.avatar-wrapper {
+  margin-bottom: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.avatar-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: 0 15px 35px rgba(199, 90, 76, 0.25);
+}
+
+.avatar-fallback {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff9a9e, #fecfef);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 52px;
+  font-weight: bold;
+  color: #c75a4c;
+  margin: 0 auto;
+  box-shadow: 0 15px 35px rgba(199, 90, 76, 0.3);
+  border: 3px solid white;
+}
+
+/* Informações do Perfil */
+.name {
+  font-size: 32px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #c75a4c, #e8967a, #f0a88e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.bio {
+  font-size: 16px;
+  color: #a38a7a;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+/* Links Grid */
+.links-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+/* Link Item com degradê e efeito flutuante - Botões mais arredondados */
+.link-item {
+  background: linear-gradient(105deg, #ffffff 0%, #fff5f8 100%);
+  border-radius: 60px;
+  padding: 14px 24px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.link-item:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(105deg, #fff, #ffe0ec);
+  box-shadow: 0 15px 30px rgba(199, 90, 76, 0.25);
+}
+
+/* Link em Destaque - Degradê mais forte e arredondado */
+.link-item.featured {
+  background: linear-gradient(105deg, #c75a4c, #e17055, #d63031);
+  margin-bottom: 25px;
+  box-shadow: 0 12px 28px rgba(199, 90, 76, 0.45);
+  border: none;
+  border-radius: 60px;
+}
+
+.link-item.featured:hover {
+  transform: translateY(-6px);
+  background: linear-gradient(105deg, #b14a3d, #d4856a, #c0392b);
+  box-shadow: 0 20px 40px rgba(199, 90, 76, 0.55);
+}
+
+.link-item.featured .link-name {
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.link-item.featured .link-arrow {
+  color: white;
+  opacity: 1;
+}
+
+.link-item.featured .link-icon {
+  color: white;
+}
+
+/* Estilos dos Links */
+.link-icon {
+  font-size: 26px;
+  width: 40px;
+  text-align: center;
+}
+
+.link-name {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #c75a4c, #e8967a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.3s;
+}
+
+.link-item.featured .link-name {
+  background: none;
+  color: white;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+}
+
+.link-arrow {
+  font-size: 20px;
+  color: #c75a4c;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.link-item:hover .link-arrow {
+  opacity: 1;
+}
+
+/* Rodapé e Botões de Compartilhamento - Mais arredondados */
+.footer {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.share-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.share-btn {
+  background: linear-gradient(135deg, #ffffff, #fff5f8);
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #c75a4c;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.share-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(199, 90, 76, 0.3);
+  background: linear-gradient(135deg, #fff, #ffe8f0);
+  color: #b14a3d;
+}
+
+.share-btn.twitter:hover {
+  background: linear-gradient(135deg, #1DA1F2, #0d8de8);
+  color: white;
+  box-shadow: 0 10px 25px rgba(29, 161, 242, 0.4);
+}
+
+.share-btn.facebook:hover {
+  background: linear-gradient(135deg, #4267B2, #365899);
+  color: white;
+  box-shadow: 0 10px 25px rgba(66, 103, 178, 0.4);
+}
+
+.share-btn.copy:hover {
+  background: linear-gradient(135deg, #28a745, #218838);
+  color: white;
+  box-shadow: 0 10px 25px rgba(40, 167, 69, 0.4);
+}
+
+.footer-text {
+  font-size: 12px;
+  color: rgba(162, 138, 122, 0.7);
+}
+
+/* Loading Spinner */
+.loading {
+  text-align: center;
+  color: #c75a4c;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #c75a4c, #e17055, #d63031);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 20px;
+  box-shadow: 0 8px 25px rgba(199, 90, 76, 0.5);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .perf-card {
+    padding: 0 10px;
+  }
+
+  .name {
+    font-size: 26px;
+  }
+
+  .avatar-img, .avatar-fallback {
+    width: 100px;
+    height: 100px;
+    font-size: 44px;
+  }
+
+  .link-item {
+    padding: 12px 20px;
+  }
+
+  .link-icon {
+    font-size: 22px;
+    width: 35px;
+  }
+
+  .link-name {
+    font-size: 14px;
+  }
+
+  .share-buttons {
+    gap: 10px;
+  }
+
+  .share-btn {
+    padding: 8px 16px;
+    font-size: 11px;
+  }
+}
