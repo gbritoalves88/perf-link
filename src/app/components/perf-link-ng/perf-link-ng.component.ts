@@ -18,7 +18,7 @@ export interface Link {
 export class PerfLinkNgComponent implements OnInit {
   profileName: string = 'Natália Gusmão';
   profileBio: string = '✨ Criadora de conteúdo | 🌸 Lifestyle | 💖 Vivendo um sonho de cada vez';
-  profileAvatarUrl: string = 'assets/images/perfil.jpg';
+  profileAvatarUrl: string = 'assets/images/perfilNg.jpg';
 
   featuredLink: Link = {
     name: '🎁 Link em Destaque',
