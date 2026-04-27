@@ -12,10 +12,10 @@ export interface Link {
   selector: 'app-perf-link',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './perf-link.component.html',
-  styleUrls: ['./perf-link.component.css']
+  templateUrl: './perf-link-nat.component.html',
+  styleUrls: ['./perf-link-nat.component.css']
 })
-export class PerfLinkComponent implements OnInit {
+export class PerfLinkNatComponent implements OnInit {
   profileName: string = 'Natália Gusmão';
   profileBio: string = '✨ Criadora de conteúdo | 🌸 Lifestyle | 💖 Vivendo um sonho de cada vez';
   profileAvatarUrl: string = 'assets/images/perfil.jpg';
