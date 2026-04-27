@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+/* Remove bordas e margens do body */
+body {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+/* Remove qualquer borda de todos os elementos */
+* {
+  border: none;
+}
