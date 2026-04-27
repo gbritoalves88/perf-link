@@ -1,0 +1,73 @@
+<div class="container">
+  <!-- Tela de Loading -->
+  <div *ngIf="loading" class="loading">
+    <div class="spinner"></div>
+    <p>Carregando PerfLink...</p>
+  </div>
+
+  <!-- Conteúdo Principal -->
+  <div *ngIf="!loading" class="perf-card">
+
+    <!-- Avatar / Foto de Perfil -->
+    <div class="avatar-wrapper">
+      <img
+        *ngIf="profileAvatarUrl"
+        [src]="profileAvatarUrl"
+        [alt]="profileName"
+        class="avatar-img"
+        (error)="profileAvatarUrl = ''"
+      >
+      <div *ngIf="!profileAvatarUrl" class="avatar-fallback">
+        {{ profileName.charAt(0) }}
+      </div>
+    </div>
+
+    <!-- Nome e Bio -->
+    <h1 class="name">{{ profileName }}</h1>
+    <p class="bio">{{ profileBio }}</p>
+
+    <!-- Link em Destaque (Call-to-Action) -->
+    <a
+      *ngIf="featuredLink"
+      [href]="featuredLink.url"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="link-item featured"
+    >
+      <span class="link-icon">{{ featuredLink.icon }}</span>
+      <span class="link-name">{{ featuredLink.name }}</span>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <!-- Links Normais -->
+    <div class="links-grid">
+      <a
+        *ngFor="let link of links"
+        [href]="link.url"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="link-item"
+      >
+        <span class="link-icon">{{ link.icon }}</span>
+        <span class="link-name">{{ link.name }}</span>
+        <span class="link-arrow">→</span>
+      </a>
+    </div>
+
+    <!-- Rodapé com Botões de Compartilhamento -->
+    <footer class="footer">
+      <div class="share-buttons">
+        <button (click)="shareOnTwitter()" class="share-btn twitter">
+          🐦 X (Twitter)
+        </button>
+        <button (click)="shareOnFacebook()" class="share-btn facebook">
+          📘 Facebook
+        </button>
+        <button (click)="copyLink()" class="share-btn copy">
+          🔗 Copiar Link
+        </button>
+      </div>
+      <p class="footer-text">✨ PerfLink | Todos os links em um só lugar</p>
+    </footer>
+  </div>
+</div>

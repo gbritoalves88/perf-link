@@ -1,0 +1,293 @@
+:host {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #f5e6e0 0%, #ebc5b7 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  border: none;
+  outline: none;
+}
+
+/* Card Principal - Fundo transparente/translúcido */
+.perf-card {
+  max-width: 650px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 32px;
+  padding: 45px 35px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeInUp 0.6s ease-out;
+  border: none;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Avatar */
+.avatar-wrapper {
+  margin-bottom: 20px;
+}
+
+.avatar-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-fallback {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 52px;
+  font-weight: bold;
+  color: #c75a4c;
+  margin: 0 auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+/* Informações do Perfil */
+.name {
+  font-size: 28px;
+  font-weight: 700;
+  color: #4a2a20;
+  margin-bottom: 10px;
+}
+
+.bio {
+  font-size: 15px;
+  color: #5c3a2e;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+/* Links Grid */
+.links-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+/* Link Item Padrão - Transparente */
+.link-item {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 14px 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: none;
+}
+
+.link-item:hover {
+  transform: translateX(5px);
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Link em Destaque (Featured) - Cor #c75a4c */
+.link-item.featured {
+  background: #c75a4c;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 20px rgba(199, 90, 76, 0.3);
+  border: none;
+}
+
+.link-item.featured:hover {
+  transform: translateY(-3px);
+  background: #b14a3d;
+  box-shadow: 0 12px 25px rgba(199, 90, 76, 0.4);
+}
+
+.link-item.featured .link-name {
+  color: white;
+  font-weight: bold;
+}
+
+.link-item.featured .link-arrow {
+  color: white;
+  opacity: 1;
+}
+
+.link-item.featured .link-icon {
+  color: white;
+}
+
+/* Estilos dos Links */
+.link-icon {
+  font-size: 26px;
+  width: 40px;
+  text-align: center;
+}
+
+.link-name {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 500;
+  color: #4a2a20;
+  transition: color 0.3s;
+}
+
+.link-arrow {
+  font-size: 20px;
+  color: #c75a4c;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.link-item:hover .link-arrow {
+  opacity: 1;
+}
+
+/* Rodapé e Botões de Compartilhamento */
+.footer {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.share-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.share-btn {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #4a2a20;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.share-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.share-btn.twitter:hover {
+  background: #1DA1F2;
+  color: white;
+}
+
+.share-btn.facebook:hover {
+  background: #4267B2;
+  color: white;
+}
+
+.share-btn.copy:hover {
+  background: #28a745;
+  color: white;
+}
+
+.footer-text {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Loading Spinner */
+.loading {
+  text-align: center;
+  color: #4a2a20;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(199, 90, 76, 0.3);
+  border-top-color: #c75a4c;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .perf-card {
+    padding: 30px 20px;
+  }
+
+  .name {
+    font-size: 24px;
+  }
+
+  .avatar-img, .avatar-fallback {
+    width: 100px;
+    height: 100px;
+    font-size: 44px;
+  }
+
+  .link-item {
+    padding: 12px 16px;
+  }
+
+  .link-icon {
+    font-size: 22px;
+    width: 35px;
+  }
+
+  .link-name {
+    font-size: 14px;
+  }
+
+  .share-buttons {
+    gap: 8px;
+  }
+
+  .share-btn {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+}
