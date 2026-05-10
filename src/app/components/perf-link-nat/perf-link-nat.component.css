@@ -12,7 +12,8 @@
 
 .container {
   min-height: 100vh;
-  background: #fcf5f9;
+  background: #bc5d29;
+  /*   background: #fcf5f9;*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,7 +90,7 @@
 .name {
   font-size: 32px;
   font-weight: 700;
-  background: linear-gradient(135deg, #c75a4c, #e8967a, #f0a88e);
+  background: linear-gradient(135deg, #f5f1cf, #e8e6c1, #f0a88e);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -99,7 +100,7 @@
 
 .bio {
   font-size: 16px;
-  color: #a38a7a;
+  color: #403e3e;
   line-height: 1.6;
   margin-bottom: 35px;
 }
@@ -114,7 +115,7 @@
 
 /* Link Item com degradê e efeito flutuante - Botões mais arredondados */
 .link-item {
-  background: linear-gradient(105deg, #ffffff 0%, #fff5f8 100%);
+  background: linear-gradient(105deg, #e5e9ce 0%, #fdfdfd 100%);
   border-radius: 60px;
   padding: 14px 24px;
   text-decoration: none;
@@ -174,7 +175,7 @@
   flex: 1;
   font-size: 16px;
   font-weight: 600;
-  background: linear-gradient(135deg, #c75a4c, #e8967a);
+  background: linear-gradient(135deg, #6b0e02, #e8967a);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -256,7 +257,7 @@
 
 .footer-text {
   font-size: 12px;
-  color: rgba(162, 138, 122, 0.7);
+  color: rgba(224, 216, 210, 0.7);
 }
 
 /* Loading Spinner */
