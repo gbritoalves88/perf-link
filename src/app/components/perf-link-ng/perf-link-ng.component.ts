@@ -16,8 +16,8 @@ export interface Link {
   styleUrls: ['./perf-link-ng.component.css']
 })
 export class PerfLinkNgComponent implements OnInit {
-  profileName: string = 'Natália Gusmão';
-  profileBio: string = '✨ Criadora de conteúdo | 🌸 Lifestyle | 💖 Vivendo um sonho de cada vez';
+  profileName: string = 'NG Conteúdo';
+  profileBio: string = '✨ Criação de Conteúdo | 🌙 Videomaker Mobile | 💖 Storymaker | 💫 Social Media';
   profileAvatarUrl: string = 'assets/images/perfilNg.jpg';
 
   featuredLink: Link = {
@@ -33,14 +33,18 @@ export class PerfLinkNgComponent implements OnInit {
   ngOnInit(): void {
     // Carregar os links
     this.links = [
-      { name: "📸 Instagram", url: "https://instagram.com/", icon: "📸" },
-      { name: "🐦 TikTok", url: "https://tiktok.com/", icon: "🐦" },
-      { name: "▶️ YouTube", url: "https://youtube.com/", icon: "▶️" },
-      { name: "🎵 Spotify", url: "https://spotify.com/", icon: "🎵" },
-      { name: "💬 WhatsApp", url: "https://wa.me/5511999999999", icon: "💬" },
-      { name: "📧 E-mail", url: "mailto:contato@email.com", icon: "📧" },
-      { name: "🛍️ Loja Online", url: "https://loja.com", icon: "🛍️" },
-      { name: "📚 Meus Livros", url: "https://amazon.com/", icon: "📚" }
+      { name: "Instagram", url: "https://www.instagram.com/ngconteudo/", icon: "" },
+      { name: "Portfólio 1", url: "https://canva.link/9ey6g6jmnwberen", icon: "" },
+      { name: "Portfólio 2", url: "https://canva.link/vpdrts4cec8eg2y", icon: "" },
+
+      //{ name: "TikTok", url: "https://tiktok.com/", icon: "" },
+      //{ name: "YouTube", url: "https://youtube.com/", icon: "" },
+      //{ name: "Spotify", url: "https://spotify.com/", icon: "" },
+      { name: "Entre em contato", url: "https://wa.me/5511982710781", icon: "" },
+      { name: "E-mail", url: "mailto:nataliagusmao25@gmail.com", icon: "" },
+      //{ name: "Loja Online", url: "https://loja.com", icon: "" },
+
+      { name: "Natália Gusmão", url: "https://www.instagram.com/nat.gusmao/", icon: "" },
     ];
     this.loading = false;
   }

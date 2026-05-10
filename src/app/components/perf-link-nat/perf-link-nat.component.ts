@@ -17,7 +17,7 @@ export interface Link {
 })
 export class PerfLinkNatComponent implements OnInit {
   profileName: string = 'Natália Gusmão';
-  profileBio: string = '✨ Criadora de conteúdo | 🌸 Lifestyle | 💖 Vivendo um sonho de cada vez';
+  profileBio: string = '✨ Criadora de conteúdo | 🌙 Moda | 💖 Beleza';
   profileAvatarUrl: string = 'assets/images/perfil.jpg';
 
   featuredLink: Link = {
@@ -33,14 +33,16 @@ export class PerfLinkNatComponent implements OnInit {
   ngOnInit(): void {
     // Carregar os links
     this.links = [
-      { name: "📸 Instagram", url: "https://instagram.com/", icon: "📸" },
-      { name: "🐦 TikTok", url: "https://tiktok.com/", icon: "🐦" },
-      { name: "▶️ YouTube", url: "https://youtube.com/", icon: "▶️" },
-      { name: "🎵 Spotify", url: "https://spotify.com/", icon: "🎵" },
-      { name: "💬 WhatsApp", url: "https://wa.me/5511999999999", icon: "💬" },
-      { name: "📧 E-mail", url: "mailto:contato@email.com", icon: "📧" },
-      { name: "🛍️ Loja Online", url: "https://loja.com", icon: "🛍️" },
-      { name: "📚 Meus Livros", url: "https://amazon.com/", icon: "📚" }
+      { name: "Instagram", url: "https://www.instagram.com/nat.gusmao/", icon: "" },
+       { name: "TikTok", url: "https://www.tiktok.com/@nat.gusmao", icon: "" },
+       { name: " YouTube", url: "https://www.youtube.com/@Explorandojuntosng", icon: "" },
+      { name: "NG Conteúdo", url: "https://www.instagram.com/ngconteudo/", icon: "" },
+
+     // { name: "🎵 Spotify", url: "https://spotify.com/", icon: "🎵" },
+     // { name: "💬 WhatsApp", url: "https://wa.me/5511999999999", icon: "💬" },
+      { name: "E-mail", url: "mailto:nataliagusmao25@gmail.com", icon: "" },
+     // { name: "🛍️ Loja Online", url: "https://loja.com", icon: "🛍️" }
+     // { name: "📚 Meus Livros", url: "https://amazon.com/", icon: "📚" }
     ];
     this.loading = false;
   }

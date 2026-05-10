@@ -26,7 +26,7 @@
     <h1 class="name">{{ profileName }}</h1>
     <p class="bio">{{ profileBio }}</p>
 
-    <!-- Link em Destaque (Call-to-Action) -->
+    <!-- Link em Destaque (Call-to-Action)
     <a
       *ngIf="featuredLink"
       [href]="featuredLink.url"
@@ -37,7 +37,7 @@
       <span class="link-icon">{{ featuredLink.icon }}</span>
       <span class="link-name">{{ featuredLink.name }}</span>
       <span class="link-arrow">→</span>
-    </a>
+    </a>-->
 
     <!-- Links Normais -->
     <div class="links-grid">
@@ -48,15 +48,15 @@
         rel="noopener noreferrer"
         class="link-item"
       >
-        <span class="link-icon">{{ link.icon }}</span>
+
         <span class="link-name">{{ link.name }}</span>
-        <span class="link-arrow">→</span>
+
       </a>
     </div>
 
     <!-- Rodapé com Botões de Compartilhamento -->
     <footer class="footer">
-      <div class="share-buttons">
+      <!--<div class="share-buttons">
         <button (click)="shareOnTwitter()" class="share-btn twitter">
           🐦 X (Twitter)
         </button>
@@ -66,7 +66,7 @@
         <button (click)="copyLink()" class="share-btn copy">
           🔗 Copiar Link
         </button>
-      </div>
+      </div>-->
       <p class="footer-text">✨ PerfLink | Todos os links em um só lugar</p>
     </footer>
   </div>
