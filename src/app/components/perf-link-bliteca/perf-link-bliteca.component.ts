@@ -33,11 +33,11 @@ export class PerfLinkBlitecaComponent implements OnInit {
   },
   {
     name: "Baixe o Aplicativo",
-    url: "https://canva.link/9ey6g6jmnwberen",
+    url: "https://play.google.com/",
     icon: "download"
   },
   {
-    name: "Acesse o App",
+    name: "Acesse o App Web",
     url: "https://bliteca-three.vercel.app/",
     icon: "language"
   },
