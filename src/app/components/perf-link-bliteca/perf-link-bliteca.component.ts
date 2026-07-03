@@ -38,7 +38,7 @@ export class PerfLinkBlitecaComponent implements OnInit {
   },
   {
     name: "Acesse o App Web",
-    url: "https://bliteca-three.vercel.app/",
+    url: "https://bliteca.com.br/",
     icon: "language"
   },
   {
@@ -48,7 +48,7 @@ export class PerfLinkBlitecaComponent implements OnInit {
   },
   {
     name: "Política de Privacidade",
-    url: "https://bliteca-three.vercel.app/privacy.html",
+    url: "https://bliteca.com.br/privacy.html",
     icon: "shield"
   }
 ];
