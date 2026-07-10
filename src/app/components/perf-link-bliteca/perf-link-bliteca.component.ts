@@ -33,7 +33,7 @@ export class PerfLinkBlitecaComponent implements OnInit {
   },
   {
     name: "Baixe o Aplicativo",
-    url: "https://play.google.com/",
+    url: "https://play.google.com/store/apps/details?id=com.bliteca.app",
     icon: "download"
   },
   {
