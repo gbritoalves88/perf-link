@@ -37,7 +37,7 @@ export class PerfLinkBlitecaComponent implements OnInit {
     icon: "download"
   },
   {
-    name: "Acesse o App Web",
+    name: "Acesse o Site",
     url: "https://bliteca.com.br/",
     icon: "language"
   },
