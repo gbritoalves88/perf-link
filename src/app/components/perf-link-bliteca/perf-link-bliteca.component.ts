@@ -18,7 +18,7 @@ export interface Link {
 export class PerfLinkBlitecaComponent implements OnInit {
   profileName: string = 'Bliteca';
   profileBio: string = '✨Sua biblioteca. Sua História✨';
-  profileAvatarUrl: string = 'assets/images/perfilBliteca.png';
+  profileAvatarUrl: string = 'assets/images/Icone.png';
 
   links: Link[] = [];
   loading: boolean = true;
@@ -30,6 +30,11 @@ export class PerfLinkBlitecaComponent implements OnInit {
     name: "Instagram",
     url: "https://www.instagram.com/bli_teca/",
     icon: "photo_camera"
+  },
+  {
+    name: "Linkedin",
+    url: "https://www.linkedin.com/company/bliteca/",
+    icon: "link"
   },
   {
     name: "Baixe o Aplicativo",
