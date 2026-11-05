@@ -6,6 +6,13 @@ A proposta é simples: reunir diferentes links, redes sociais, portfólios e can
 
 O projeto nasceu de uma necessidade pessoal: criar páginas de apresentação para reunir os links da Natália, do projeto NG Conteúdo e do BliTeca.
 
+Sites:
+BliTeca: https://perf-link-blue.vercel.app/bliteca
+
+NG Conteúdo: https://perf-link-blue.vercel.app/ng
+
+Natália Gusmão: https://perf-link-blue.vercel.app/nat
+
 ## ✨ Funcionalidades
 
 - Páginas individuais para diferentes perfis e projetos.
